@@ -54,8 +54,11 @@ class Player {
 // Place the player object in a variable called player
 
 const allEnemies = [];
-const enemy = new Enemy(60, 60, 100); 
-const player = new Player(10, 10);
+const enemy1 = new Enemy(60, 60, 100); 
+allEnemies.push(enemy1);
+const enemy2 = new Enemy(140, 140, 200); 
+allEnemies.push(enemy2);
+const player = new Player(410, 140);
 
 
 // This listens for key presses and sends the keys to your
