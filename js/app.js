@@ -12,7 +12,7 @@ class Enemy  {
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
-update (dt) {
+update(dt){
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
@@ -28,26 +28,26 @@ render() {
 // This class requires an update(), render() and
 // a handleInput() method.
 class Player {
-    constructor(){
-
+    constructor(x, y){
+        this.sprite = 'images/char-horn-girl.png';
     }
-};
 
-update(){
+    update(){}
 
-};
+    render() {
+        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    }
 
-render() {
-
-};
-
-handleInput() {
+    handleInput() {}
 
 };
+
 
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
+
+allEnemies = [];
 // Place the player object in a variable called player
 
 
