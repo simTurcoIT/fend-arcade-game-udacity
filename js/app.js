@@ -17,7 +17,6 @@ update(dt){
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-
     }
 
 // Draw the enemy on the screen, required method for game
@@ -65,6 +64,7 @@ const phil = new Enemy(-90, 225, 250);
 //Fill the empty array
 allEnemies.push(mark, jack, simo, carl, jessie, phil);
 
+//Cordinates where the player starts
 const player = new Player(204, 418);
 
 // This listens for key presses and sends the keys to your
