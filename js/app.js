@@ -14,9 +14,9 @@ class Enemy {
 // Parameter: dt, a time delta between ticks
 update(dt){
     this.x += this.speed * dt;
-    // You should multiply any movement by the dt parameter
-    // which will ensure the game runs at the same speed for
-    // all computers.
+    if (this.x >= 500) {
+        this.x = -150;
+    }
     }
 
 // Draw the enemy on the screen, required method for game
@@ -30,9 +30,9 @@ render() {
 // a handleInput() method.
 class Player {
     constructor(x, y){
-        this.sprite = 'images/char-horn-girl.png';
         this.x = x;
         this.y = y;
+        this.sprite = 'images/char-horn-girl.png';
     }
 
     update() {}
@@ -46,20 +46,20 @@ class Player {
     }
 
 };
-
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
 //I put a name for every enemy, 2 bugs for every line
+//with different speed
 const allEnemies = [];
 
-const mark = new Enemy(-100, 60, 100); 
-const jack = new Enemy(-150, 140, 250); 
-const simo = new Enemy(-60, 60, 380); 
-const carl = new Enemy(-70, 140, 500); 
-const jessie = new Enemy(-200, 225, 400); 
-const phil = new Enemy(-90, 225, 250);
+const mark = new Enemy(-100, 60, 50); 
+const jack = new Enemy(-150, 140, 100); 
+const simo = new Enemy(-60, 60, 250); 
+const carl = new Enemy(-70, 140, 350); 
+const jessie = new Enemy(-200, 225, 300); 
+const phil = new Enemy(-90, 225, 150);
 
 //Fill the empty array
 allEnemies.push(mark, jack, simo, carl, jessie, phil);
