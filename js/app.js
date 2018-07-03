@@ -20,6 +20,7 @@ update(dt){
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+
     }
 
 // Draw the enemy on the screen, required method for game
@@ -50,17 +51,25 @@ class Player {
 
 };
 
-
-
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
+//I put a name for every enemy
 
 const allEnemies = [];
-const enemy1 = new Enemy(60, 60, 100); 
-allEnemies.push(enemy1);
-const enemy2 = new Enemy(140, 140, 200); 
-allEnemies.push(enemy2);
+
+const mark = new Enemy(60, 60, 100); 
+const jack = new Enemy(140, 140, 200); 
+const simo = new Enemy(60, 60, 150); 
+const carl = new Enemy(140, 140, 180); 
+const jessie = new Enemy(60, 60, 130); 
+
+//Fill the empty array
+allEnemies.push(mark);
+allEnemies.push(jack);
+allEnemies.push(simo);
+allEnemies.push(carl);
+allEnemies.push(jessie);
 const player = new Player(410, 140);
 
 
