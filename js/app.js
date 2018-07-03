@@ -1,10 +1,7 @@
 // Enemies our player must avoid
 class Enemy {
-    // Variables applied to each of our instances go here,
-    // we've provided one for you to get started
 
-    // The image/sprite for our enemies, this uses
-    // a helper we've provided to easily load images
+//Using "speed" as a variable here will be very useful later    
     constructor(x, y, speed){
     this.sprite = 'images/enemy-bug.png';
     this.x = x;
@@ -54,24 +51,21 @@ class Player {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-//I put a name for every enemy
 
+//I put a name for every enemy, 2 bugs for every line
 const allEnemies = [];
 
-const mark = new Enemy(60, 60, 100); 
-const jack = new Enemy(140, 140, 200); 
-const simo = new Enemy(60, 60, 150); 
-const carl = new Enemy(140, 140, 180); 
-const jessie = new Enemy(60, 60, 130); 
+const mark = new Enemy(-100, 60, 100); 
+const jack = new Enemy(-150, 140, 250); 
+const simo = new Enemy(-60, 60, 380); 
+const carl = new Enemy(-70, 140, 500); 
+const jessie = new Enemy(-200, 225, 400); 
+const phil = new Enemy(-90, 225, 250);
 
 //Fill the empty array
-allEnemies.push(mark);
-allEnemies.push(jack);
-allEnemies.push(simo);
-allEnemies.push(carl);
-allEnemies.push(jessie);
-const player = new Player(410, 140);
+allEnemies.push(mark, jack, simo, carl, jessie, phil);
 
+const player = new Player(204, 418);
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
