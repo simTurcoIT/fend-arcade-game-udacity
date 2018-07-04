@@ -55,7 +55,11 @@ class Player {
 
         if (this.y > 400) {
             this.y = 400;
-        }       
+        }    
+        
+        if (this.y < -5) {
+            this.y = -5;
+        }   
 }
 
     render() {
