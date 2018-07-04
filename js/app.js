@@ -12,8 +12,7 @@ class Enemy {
     checkCollisions() {
        return Math.abs(this.y-player.y) < 30 && Math.abs(this.x-player.x) < 60; 
     }
-
-
+    
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
    update(dt){
@@ -25,7 +24,6 @@ class Enemy {
        if (this.x >= 500) {
        this.x = -150;
     }
-
   };
 
 // Draw the enemy on the screen, required method for game
@@ -42,22 +40,22 @@ class Player {
         this.moves = moves; 
         this.sprite = 'images/char-horn-girl.png';
     }
+    
 //The player must not go off screen, I also avoided 
 //"small movements" 
      update(x, y) {
-        
+         
         if (this.x >= 410) {
             this.x = 410;
         }
-
+         
         if (this.x <= 0) {
             this.x = 0;
         }
 
         if (this.y > 400) {
             this.y = 400;
-        }
-        
+        }       
 }
 
     render() {
@@ -79,15 +77,15 @@ class Player {
             this.y += this.moves + 85;
             break;  
         } 
+        
         //When the player arrives at the water
         if (this.y <= 0) {
             setTimeout(() => {
-                alert("qualcosa");
-            window.location.reload();
-            }, 100);
+            modal.style.visibility= "visible";
+            }, 150);
           }
-        }
-        
+        }  
+    
     };
    
 //2 bugs for every line with different speed
@@ -101,6 +99,8 @@ new Enemy(-90, 225, 150)];
 //Coordinates where the player starts
 const player = new Player(204, 400, 0);
 
+//Finishing game modal
+const modal = document.querySelector('.modal');
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
