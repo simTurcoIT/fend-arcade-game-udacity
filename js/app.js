@@ -57,7 +57,7 @@ class Player {
             this.y = 400;
         }    
         
-        if (this.y < -5) {
+        if (this.y <= -5) {
             this.y = -5;
         }   
 }
