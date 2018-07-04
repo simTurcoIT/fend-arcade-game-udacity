@@ -25,7 +25,7 @@ class Enemy {
        this.x = -150;
     }
 
-  }
+  };
 
 // Draw the enemy on the screen, required method for game
 render() {
