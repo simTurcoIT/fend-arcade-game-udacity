@@ -10,7 +10,7 @@ class Enemy {
     }
 
     checkCollisions() {
-       return Math.abs(this.y-player.y) < 30 && Math.abs(this.x-player.x) < 50; 
+       return Math.abs(this.y-player.y) < 30 && Math.abs(this.x-player.x) < 60; 
     }
 
 
