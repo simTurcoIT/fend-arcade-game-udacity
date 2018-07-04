@@ -11,5 +11,5 @@ Try it [Here](https://simturcoit.github.io/fend-arcade-game-udacity/)
 
 ## Preview
 
-![Start]()
+![Start](https://github.com/simTurcoIT/fend-arcade-game-udacity/blob/master/img/Cattura.PNG)
 
