@@ -1,7 +1,7 @@
-frontend-nanodegree-arcade-game
+Arcade game (frogger clone)
 ===============================
 
-Project number for Udacity FEND
+Project number four of Udacity FEND nanodegree
 
 ## How to start
 
