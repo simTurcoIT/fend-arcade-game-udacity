@@ -10,7 +10,7 @@ class Enemy {
     }
 
     checkCollisions() {
-       return Math.abs(this.y-player.y) < 30 && Math.abs(this.x-player.x) < 55; 
+       return Math.abs(this.y-player.y) < 30 && Math.abs(this.x-player.x) < 60; 
     }
 
 
@@ -78,16 +78,22 @@ class Player {
             this.y += this.moves + 85;
             break;  
         } 
+        //When the player arrives at the water
+        if (this.y <= 0) {
+            setTimeout(() => {
+                alert("qualcosa");
+            window.location.reload();
+            }, 100);
+          }
+        }
         
-    }
-    //After handleImput() I will put an alert/modal of victory
-};
+    };
+   
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
-//I put a name for every enemy, 2 bugs for every line
-//with different speed
+//2 bugs for every line with different speed
 const allEnemies = [new Enemy(-100, 60, 50), new Enemy(-150, 140, 100),
 new Enemy(-60, 60, 250), new Enemy(-70, 140, 350), 
 new Enemy(-200, 225, 300), new Enemy(-90, 225, 150)];
