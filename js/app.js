@@ -1,7 +1,7 @@
 // Enemies our player must avoid
 class Enemy {
 
-//Using "speed" as a variable here will be very useful later    
+//Using "speed" as a parameter here will be very useful later    
     constructor(x, y, speed){
     this.sprite = 'images/enemy-bug.png';
     this.x = x;
