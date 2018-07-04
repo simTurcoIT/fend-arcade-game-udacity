@@ -10,7 +10,7 @@ class Enemy {
     }
 
     checkCollisions() {
-       return Math.abs(this.y-player.y) < 30 && Math.abs(this.x-player.x) < 60; 
+       return Math.abs(this.y-player.y) < 30 && Math.abs(this.x-player.x) < 40; 
     }
 
 
@@ -19,7 +19,8 @@ class Enemy {
    update(dt){
        this.x += this.speed * dt;
     if(this.checkCollisions()) {
-      window.location.reload();
+      player.x = 204;
+      player.y = 400;
     }
        if (this.x >= 500) {
        this.x = -150;
@@ -89,16 +90,15 @@ class Player {
         
     };
    
-// Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
-// Place the player object in a variable called player
-
 //2 bugs for every line with different speed
-const allEnemies = [new Enemy(-100, 60, 50), new Enemy(-150, 140, 100),
-new Enemy(-60, 60, 250), new Enemy(-70, 140, 350), 
-new Enemy(-200, 225, 300), new Enemy(-90, 225, 150)];
+const allEnemies = [new Enemy(-100, 60, 50), 
+new Enemy(-150, 140, 100),
+new Enemy(-60, 60, 250), 
+new Enemy(-70, 140, 350), 
+new Enemy(-200, 225, 300), 
+new Enemy(-90, 225, 150)];
 
-//Cordinates where the player starts
+//Coordinates where the player starts
 const player = new Player(204, 400, 0);
 
 
