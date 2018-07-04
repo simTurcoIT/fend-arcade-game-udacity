@@ -86,7 +86,7 @@ class Player {
         if (this.y <= 0) {
             setTimeout(() => {
             modal.style.visibility= "visible";
-            }, 150);
+            }, 100);
           }
         }  
     
